@@ -9,8 +9,7 @@ buildConfiguration:
 livePreviewConfiguration:
   setupCommand: ":"
 
-locales:
-  - en
+assetsDir: locations/assets
 
 # The site stream allows for specification of site entity whose data will be injected to all
 # generation contexts under the `_site` property.
@@ -32,23 +31,23 @@ siteStream:
 #       - joe-custom-value
 
 # Static redirects can establish redirects from individual source paths to individual destination paths.
-staticRedirects:
-  - from: /financial-professionals/fp-0913
-    to: https://properly-oriented-ocelot.pgsdemo.com/financial-professionals/fp-0913
-    status: 301
-  # static rewrite
-  - from: /aarons-store
-    to: /locations/en/aarons-store
-    status: 200
+# staticRedirects:
+#   - from: /financial-professionals/fp-0913
+#     to: https://properly-oriented-ocelot.pgsdemo.com/financial-professionals/fp-0913
+#     status: 301
+#   # static rewrite
+#   - from: /aarons-store
+#     to: /locations/en/aarons-store
+#     status: 200
 # Dynamic redirects can establish redirect groups based on pattern matching.
-dynamicRedirects:
-  - from: /men/*
-    to: https://commerce.skiware.us/men/:splat
-    status: 302
-  # dynamic rewrite
-  - from: /fin-pros/*
-    to: /financial-professionals/:splat
-    status: 200
+# dynamicRedirects:
+#   - from: /men/*
+#     to: https://commerce.skiware.us/men/:splat
+#     status: 302
+#   # dynamic rewrite
+#   - from: /fin-pros/*
+#     to: /financial-professionals/:splat
+#     status: 200
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
 # sitemap:
 #   excludeList:
@@ -58,10 +57,10 @@ dynamicRedirects:
 #   fileName: fancy-sitemap
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
-authentication:
-  policyName: oidc
-  includePaths: # the paths which should be included in the auth policy
-    - /locations/*
+# authentication:
+#   policyName: oidc
+#   includePaths: # the paths which should be included in the auth policy
+#     - /locations/*
 # The serving configuration allows for specification of a reverse proxy domain.
-# serving:
-#   reverseProxyDomain: reverseproxy.com/path
+serving:
+  reverseProxyDomain: https://strong-daffodil-0d9a4c.netlify.app/locations

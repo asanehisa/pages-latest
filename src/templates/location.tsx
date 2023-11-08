@@ -22,7 +22,7 @@ import "../index.css";
  */
 export const config: TemplateConfig = {
   stream: {
-    $id: "my-stream-id",
+    $id: "locations",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
     fields: ["id", "name", "slug"],
@@ -82,6 +82,7 @@ const EntityPage: Template<TemplateRenderProps> = ({
 
   return (
     <>
+      <img src={"/logo.png"} alt="Yext Logo" />
       <h1>Entity Powered Page for Location entities</h1>
       <div>Entity Name: {name}</div>
     </>
