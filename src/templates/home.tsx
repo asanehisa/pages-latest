@@ -66,7 +66,7 @@ const Home: Template<TemplateRenderProps<HomeEntityType>> = ({ document }) => {
 
   return (
     <Main>
-      <Header logo={_site.logo} />
+      <Header logo={_site?.logo} />
       <main className="mx-auto max-w-5xl px-6 pb-52">
         <div className="flex flex-col gap-8 my-12">
           {document.blogStarter_coverPhoto && (
