@@ -1,9 +1,7 @@
+import { Image, ComplexImageType, ImageType } from "@yext/sites-components";
+
 export interface HeaderProps {
-  /**
-   * @displayName Logo
-   * @tooltip Controls the logo to display in the header
-   */
-  logo: string;
+  logo?: ComplexImageType | ImageType;
 }
 
 export const Header = ({ logo }: HeaderProps) => {
@@ -13,13 +11,14 @@ export const Header = ({ logo }: HeaderProps) => {
         className="mx-auto flex h-full items-center justify-between px-8"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
-          <a href="/">
-            <span className="sr-only">Company logo</span>
-            <img className="h-8 w-auto" src={logo} alt="Company logo" />
-          </a>
-        </div>
-
+        {logo && (
+          <div className="flex lg:flex-1">
+            <a href="/">
+              <span className="sr-only">Company logo</span>
+              <Image className="h-8 w-auto" image={logo} />
+            </a>
+          </div>
+        )}
         <div className="flex flex-1 items-center justify-end gap-x-6">
           <a
             href="#"

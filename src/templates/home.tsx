@@ -62,9 +62,11 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 };
 
 const Home: Template<TemplateRenderProps<HomeEntityType>> = ({ document }) => {
+  const { _site } = document;
+
   return (
     <Main>
-      <Header logo="http://a.mktgcdn.com/p/86Moa_TLbLDstVl9pCx-CZwrroZevu43XtPiCZVCG3U/300x300.png" />
+      <Header logo={_site.logo} />
       <main className="mx-auto max-w-5xl px-6 pb-52">
         <div className="flex flex-col gap-8 my-12">
           {document.blogStarter_coverPhoto && (

@@ -15,6 +15,7 @@ import { Header } from "../components/Header";
 import { BackButton } from "../components/BackButton";
 import { MarkdownContent } from "../components/MarkdownContent";
 import Footer from "../components/Footer";
+import { Blogs } from "../types/autogen";
 
 export const config: TemplateConfig = {
   stream: {
@@ -61,16 +62,16 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
  * This is the main template. It can have any name as long as it's the default export.
  * The props passed in here are the direct stream document defined by `config`.
  */
-const EntityPage: Template<TemplateRenderProps> = ({
+const EntityPage: Template<TemplateRenderProps<Blogs>> = ({
   relativePrefixToRoot,
   path,
   document,
 }) => {
-  const { name } = document;
+  const { name, _site } = document;
 
   return (
     <Main>
-      <Header logo="http://a.mktgcdn.com/p/86Moa_TLbLDstVl9pCx-CZwrroZevu43XtPiCZVCG3U/300x300.png" />
+      <Header logo={_site.logo} />
       <main className="mx-auto max-w-5xl px-6 pb-52">
         <div className="flex flex-col max-w-2xl gap-8 my-8 mx-auto">
           <BackButton backToUrl="/" />
