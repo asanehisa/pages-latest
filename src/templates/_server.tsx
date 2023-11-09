@@ -6,17 +6,7 @@ export { render };
 
 const render = async (pageContext: PageContext<any>) => {
   const { Page, pageProps } = pageContext;
-  const viewHtml = ReactDOMServer.renderToString(
-    // <Auth0Provider
-    //   domain="dev-u3433rooy5m6eezt.us.auth0.com"
-    //   clientId="GF0dafL06NHsW1uSr2IRU840z5I8RP0Z"
-    //   authorizationParams={{
-    //     redirect_uri: "http://localhost:5173/index.html",
-    //   }}
-    // >
-    <Page {...pageProps} />
-    // </Auth0Provider>
-  );
+  const viewHtml = ReactDOMServer.renderToString(<Page {...pageProps} />);
   return `<!DOCTYPE html>
     <html lang="<!--app-lang-->">
       <head></head>

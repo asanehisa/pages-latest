@@ -73,7 +73,7 @@ const Home: Template<TemplateRenderProps> = ({
   const { _site } = document;
 
   React.useEffect(() => {
-    console.log(window.location.origin);
+    console.log(YEXT_PUBLIC_EXTERNAL_IMAGE_API_BASE_URL);
   }, []);
 
   return (
