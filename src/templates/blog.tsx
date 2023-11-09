@@ -71,7 +71,7 @@ const EntityPage: Template<TemplateRenderProps<Blogs>> = ({
 
   return (
     <Main>
-      <Header logo={_site.logo} />
+      <Header logo={_site?.logo} />
       <main className="mx-auto max-w-5xl px-6 pb-52">
         <div className="flex flex-col max-w-2xl gap-8 my-8 mx-auto">
           <BackButton backToUrl="/" />

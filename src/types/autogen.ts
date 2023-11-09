@@ -38,8 +38,8 @@ export interface Blogs {
   blogStarter_metaDescription: string;
   blogStarter_keywords: string;
   blogStarter_blogAuthor: string;
-  _site: {
-    logo: ComplexImageType | ImageType;
+  _site?: {
+    logo?: ComplexImageType | ImageType;
   };
 }
 
@@ -63,7 +63,7 @@ export interface Home {
   slug: string;
   blogStarter_coverPhoto: ComplexImage;
   blogStarter_featuredBlogs: BlogStarter_featuredBlogs[];
-  _site: {
-    logo: ComplexImageType | ImageType;
+  _site?: {
+    logo?: ComplexImageType | ImageType;
   };
 }
