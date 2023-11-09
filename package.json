@@ -23,15 +23,21 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.3",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "@yext/sites-components": "^1.0.0-rc.5",
     "clsx": "^1.2.1",
+    "cva": "npm:class-variance-authority@^0.7.0",
+    "install": "^0.13.0",
     "lodash": "^4.17.21",
-    "react": "^18.2.0",    
+    "npm": "^10.2.3",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.0",
     "tailwind-merge": "^1.6.2"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/lodash": "^4.14.200",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
