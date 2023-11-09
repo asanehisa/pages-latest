@@ -66,6 +66,16 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
     title: document.name,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
+    tags: [
+      {
+        type: "link",
+        attributes: {
+          rel: "icon",
+          type: "image/x-icon",
+          href: "/yext-favicon.ico",
+        },
+      },
+    ],
   };
 };
 
