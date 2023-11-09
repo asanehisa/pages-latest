@@ -1,4 +1,3 @@
-import * as React from "react";
 import "../index.css";
 import {
   Template,
@@ -10,10 +9,11 @@ import {
   TemplateRenderProps,
 } from "@yext/pages";
 import { Image } from "@yext/sites-components";
-import { useAuth0 } from "@auth0/auth0-react";
 import { Main } from "../layouts/Main";
 import { Header } from "../components/Header";
 import Footer from "../components/Footer";
+import { FeaturedBlog } from "../components/FeaturedBlog";
+import { Home as HomeEntityType } from "../types/autogen";
 
 export const config: TemplateConfig = {
   stream: {
@@ -61,21 +61,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-const Home: Template<TemplateRenderProps> = ({
-  relativePrefixToRoot,
-  path,
-  document,
-}) => {
-  const { loginWithRedirect } = useAuth0();
-
-  // This is the site object from the Knowledge Graph. It contains all the data
-  // for the site entity, and can be accessed in any template, including static templates.
-  const { _site } = document;
-
-  React.useEffect(() => {
-    console.log(YEXT_PUBLIC_EXTERNAL_IMAGE_API_BASE_URL);
-  }, []);
-
+const Home: Template<TemplateRenderProps<HomeEntityType>> = ({ document }) => {
   return (
     <Main>
       <Header logo="http://a.mktgcdn.com/p/86Moa_TLbLDstVl9pCx-CZwrroZevu43XtPiCZVCG3U/300x300.png" />
@@ -87,6 +73,11 @@ const Home: Template<TemplateRenderProps> = ({
           <h1 className="text-gray-900 font-bold text-4xl">
             Featured Articles
           </h1>
+          <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
+            {document.blogStarter_featuredBlogs.map((blog) => (
+              <FeaturedBlog blog={blog} />
+            ))}
+          </div>
         </div>
       </main>
       <Footer />

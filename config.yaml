@@ -55,10 +55,11 @@ staticRedirects:
 #   fileName: fancy-sitemap
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
-# authentication:
-#   policyName: oidc
-#   includePaths: # the paths which should be included in the auth policy
-#     - /locations/*
+authentication:
+  policyName: blogs-policy
+  includePaths: # the paths which should be included in the auth policy
+    - /blogs/*
+
 # The serving configuration allows for specification of a reverse proxy domain.
 serving:
   reverseProxyDomain: https://strong-daffodil-0d9a4c.netlify.app/locations

@@ -27,7 +27,7 @@ export const FeaturedBlog = ({ blog }: FeaturedBlogProps) => {
             {formatDate(blog.datePosted)}
           </time>
           <a
-            href={blog.slug}
+            href={`/${blog.slug}`}
             className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
           >
             {blog.name}
@@ -35,7 +35,7 @@ export const FeaturedBlog = ({ blog }: FeaturedBlogProps) => {
         </div>
         <div className="group relative max-w-xl">
           <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-            <a href={blog.slug}>
+            <a href={`/${blog.slug}`}>
               <span className="absolute inset-0" />
               {blog.name}
             </a>
