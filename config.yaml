@@ -34,8 +34,8 @@ staticRedirects:
     to: /locations/en/aarons-store
     status: 301
   # static rewrite
-  - from: /locations/en/aarons-store
-    to: /locations/aarons-store
+  - from: /blogs/les
+    to: /blogs/lower-east-side
     status: 200
 # Dynamic redirects can establish redirect groups based on pattern matching.
 dynamicRedirects:
