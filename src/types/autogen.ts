@@ -56,6 +56,7 @@ export interface BlogStarter_featuredBlogs {
   blogStarter_description?: string;
   datePosted?: string;
   blogStarter_blogAuthor?: string;
+  c_premium?: boolean;
 }
 
 export interface Home {

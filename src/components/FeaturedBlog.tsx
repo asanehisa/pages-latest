@@ -32,6 +32,11 @@ export const FeaturedBlog = ({ blog }: FeaturedBlogProps) => {
           >
             {blog.name}
           </a>
+          {blog.c_premium && (
+            <div className="relative z-10 rounded-full bg-sky-200 px-3 py-1.5 font-medium text-gray-600 ">
+              Premium
+            </div>
+          )}
         </div>
         <div className="group relative max-w-xl">
           <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
@@ -47,7 +52,7 @@ export const FeaturedBlog = ({ blog }: FeaturedBlogProps) => {
         <div className="mt-6 flex border-t border-gray-900/5 pt-6">
           <div className="relative flex items-center gap-x-4">
             <div className="text-sm leading-6">
-              <p className="font-semibold text-gray-900">
+              <p className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
                 <span className="absolute inset-0" />
                 {blog.blogStarter_blogAuthor}
               </p>

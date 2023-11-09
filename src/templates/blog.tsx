@@ -31,6 +31,7 @@ export const config: TemplateConfig = {
       "blogStarter_metaDescription",
       "blogStarter_keywords",
       "blogStarter_blogAuthor",
+      "c_premium",
     ],
     filter: {
       entityTypes: ["blogStarter_blog"],
@@ -83,7 +84,10 @@ const EntityPage: Template<TemplateRenderProps<Blogs>> = ({
           </div>
           <h1 className="text-gray-900 font-bold text-4xl">{document.name}</h1>
           {document.blogStarter_coverPhoto && (
-            <Image image={document.blogStarter_coverPhoto} />
+            <Image
+              className="aspect-video w-full"
+              image={document.blogStarter_coverPhoto}
+            />
           )}
           <MarkdownContent content={document.blogStarter_body.markdown} />
         </div>

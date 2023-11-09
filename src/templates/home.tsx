@@ -30,6 +30,7 @@ export const config: TemplateConfig = {
       "blogStarter_featuredBlogs.blogStarter_description",
       "blogStarter_featuredBlogs.datePosted",
       "blogStarter_featuredBlogs.blogStarter_blogAuthor",
+      "blogStarter_featuredBlogs.c_premium",
     ],
     filter: { entityIds: ["blogStarter_home"] },
   },
