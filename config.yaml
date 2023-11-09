@@ -38,14 +38,15 @@ staticRedirects:
     to: /locations/aarons-store
     status: 200
 # Dynamic redirects can establish redirect groups based on pattern matching.
-# dynamicRedirects:
-#   - from: /men/*
-#     to: https://commerce.skiware.us/men/:splat
-#     status: 302
-#   # dynamic rewrite
-#   - from: /fin-pros/*
-#     to: /financial-professionals/:splat
-#     status: 200
+dynamicRedirects:
+  - from: /articles/*
+    to: /blogz/*
+    status: 302
+  # dynamic rewrite
+  - from: /blogz/*
+    to: /blogs/:splat
+    status: 200
+
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
 # sitemap:
 #   excludeList:
