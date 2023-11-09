@@ -14,7 +14,7 @@ export const Header = ({ logo }: HeaderProps) => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="./index.html">
+          <a href="/">
             <span className="sr-only">Company logo</span>
             <img className="h-8 w-auto" src={logo} alt="Company logo" />
           </a>

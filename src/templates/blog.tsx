@@ -73,7 +73,7 @@ const EntityPage: Template<TemplateRenderProps> = ({
       <Header logo="http://a.mktgcdn.com/p/86Moa_TLbLDstVl9pCx-CZwrroZevu43XtPiCZVCG3U/300x300.png" />
       <main className="mx-auto max-w-5xl px-6 pb-52">
         <div className="flex flex-col max-w-2xl gap-8 my-8 mx-auto">
-          <BackButton backToUrl="./index.html" />
+          <BackButton backToUrl="/" />
           <div className="flex gap-2 items-center">
             <p className="text-gray-400 font-light base">
               {document.blogStarter_blogAuthor}
