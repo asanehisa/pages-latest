@@ -62,5 +62,5 @@ authentication:
     - /blogs/*
 
 # The serving configuration allows for specification of a reverse proxy domain.
-serving:
-  reverseProxyDomain: https://strong-daffodil-0d9a4c.netlify.app/locations
+# serving:
+#   reverseProxyDomain: https://strong-daffodil-0d9a4c.netlify.app/locations
