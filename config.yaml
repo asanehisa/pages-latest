@@ -40,7 +40,7 @@ staticRedirects:
 # Dynamic redirects can establish redirect groups based on pattern matching.
 dynamicRedirects:
   - from: /articles/*
-    to: /blogz/*
+    to: /blogz/:splat
     status: 302
   # dynamic rewrite
   - from: /blogz/*
