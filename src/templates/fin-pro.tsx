@@ -14,7 +14,7 @@ export const config: TemplateConfig = {
     $id: "fin-pro",
     localization: { locales: ["en"] },
     fields: ["name", "slug"],
-    filter: { entityTypes: ["financialProfessional"] },
+    filter: { entityIds: ["FP-0132"] },
   },
 };
 
