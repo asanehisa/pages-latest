@@ -6,6 +6,7 @@ import {
   TemplateProps,
   TemplateRenderProps,
   Template,
+  GetRedirects,
 } from "@yext/pages";
 import "../index.css";
 
@@ -32,10 +33,6 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
   };
 };
 
-/**
- * This is the main template. It can have any name as long as it's the default export.
- * The props passed in here are the direct stream document defined by `config`.
- */
 const EntityPage: Template<TemplateRenderProps> = ({
   relativePrefixToRoot,
   path,

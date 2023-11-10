@@ -59,10 +59,12 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-/**
- * This is the main template. It can have any name as long as it's the default export.
- * The props passed in here are the direct stream document defined by `config`.
- */
+export const getRedirects: GetRedirects<TemplateProps<Blogs>> = ({
+  document,
+}) => {
+  return [`old-blog-path/${document.id}`];
+};
+
 const EntityPage: Template<TemplateRenderProps<Blogs>> = ({
   relativePrefixToRoot,
   path,
