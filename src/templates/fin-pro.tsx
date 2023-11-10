@@ -9,12 +9,13 @@ import {
   GetRedirects,
 } from "@yext/pages";
 import "../index.css";
+import { FinPro } from "../types/autogen";
 
 export const config: TemplateConfig = {
   stream: {
     $id: "fin-pro",
     localization: { locales: ["en"] },
-    fields: ["name", "slug"],
+    fields: ["id", "name", "slug"],
     filter: { entityIds: ["FP-0132"] },
   },
 };
@@ -31,6 +32,12 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
   };
+};
+
+export const getRedirects: GetRedirects<TemplateProps<FinPro>> = ({
+  document,
+}) => {
+  return [`old-fins-path/${document.id}`];
 };
 
 const EntityPage: Template<TemplateRenderProps> = ({

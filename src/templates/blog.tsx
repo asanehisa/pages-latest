@@ -59,12 +59,6 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-export const getRedirects: GetRedirects<TemplateProps<Blogs>> = ({
-  document,
-}) => {
-  return [`old-blog-path/${document.id}`];
-};
-
 const EntityPage: Template<TemplateRenderProps<Blogs>> = ({
   relativePrefixToRoot,
   path,
