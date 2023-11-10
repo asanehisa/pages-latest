@@ -37,7 +37,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
 export const getRedirects: GetRedirects<TemplateProps<FinPro>> = ({
   document,
 }) => {
-  return [`old-fins-path/${document.id}`];
+  return [`old-fins-path/${document.id.toLowerCase()}`];
 };
 
 const EntityPage: Template<TemplateRenderProps> = ({
