@@ -1,10 +1,3 @@
-/**
- * This is an example of how to create a template that makes use of streams data.
- * The stream data originates from Yext's Knowledge Graph. When a template in
- * concert with a stream is built by the Yext Sites system, a static html page
- * is generated for every corresponding stream document stream document (based on the filter).
- */
-
 import {
   GetHeadConfig,
   GetPath,
@@ -16,16 +9,14 @@ import {
   TemplateRenderProps,
 } from "@yext/pages";
 import "../index.css";
+import { Locations as LocationsType } from "../types/autogen";
 
-/**
- * Required when Knowledge Graph Stream is used for a template.
- */
 export const config: TemplateConfig = {
   stream: {
     $id: "locations",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
-    fields: ["id", "name", "slug"],
+    fields: ["id", "name", "slug", "address"],
     // Defines the scope of entities that qualify for this stream.
     filter: {
       entityTypes: ["location"],
@@ -37,26 +28,14 @@ export const config: TemplateConfig = {
   },
 };
 
-/**
- * Defines the path that the generated file will live at for production.
- */
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return document.slug ?? document.name;
 };
 
-/**
- * Defines a list of paths which will redirect to the path created by getPath.
- */
 export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
   return [`index-old/${document.id.toString()}`];
 };
 
-/**
- * This allows the user to define a function which will take in their template
- * data and produce a HeadConfig object. When the site is generated, the HeadConfig
- * will be used to generate the inner contents of the HTML document's <head> tag.
- * This can include the title, meta tags, script tags, etc.
- */
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   relativePrefixToRoot,
   path,
@@ -79,13 +58,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-/**
- * This is the main template. It can have any name as long as it's the default export.
- * The props passed in here are the direct stream document defined by `config`.
- */
-const EntityPage: Template<TemplateRenderProps> = ({
-  relativePrefixToRoot,
-  path,
+const Locations: Template<TemplateRenderProps<LocationsType>> = ({
   document,
 }) => {
   const { name } = document;
@@ -99,4 +72,4 @@ const EntityPage: Template<TemplateRenderProps> = ({
   );
 };
 
-export default EntityPage;
+export default Locations;
