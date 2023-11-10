@@ -50,7 +50,7 @@ sitemap:
   excludeList:
     - /blogs/*
   fileName: fancy-sitemap.xml
-#   disableSitemapGeneration: true
+  disableSitemapGeneration: true
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
 authentication:
