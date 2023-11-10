@@ -13,7 +13,7 @@ livePreviewConfiguration:
 # generation contexts under the `_site` property.
 siteStream:
   id: site-stream
-  entityId: blogStarter_site
+  entityId: SITE_ENTITY_ID
   fields:
     - logo
   localization:

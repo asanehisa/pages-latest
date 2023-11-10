@@ -65,6 +65,8 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 const Home: Template<TemplateRenderProps<HomeEntityType>> = ({ document }) => {
   const { _site } = document;
 
+  console.log(document);
+
   return (
     <Main>
       <Header logo={_site?.logo} />
