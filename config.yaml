@@ -46,12 +46,11 @@ dynamicRedirects:
     status: 200
 
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
-# sitemap:
-#   excludeList:
-#     - exclude1
-#     - exclude2
+sitemap:
+  excludeList:
+    - /blogs/*
 #   disableSitemapGeneration: true
-#   fileName: fancy-sitemap
+  fileName: fancy-sitemap
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
 authentication:
