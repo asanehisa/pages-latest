@@ -54,9 +54,9 @@ sitemap:
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
 authentication:
-  policyName: blogs-policy
+  policyName: blogs-policy2
   includePaths: # the paths which should be included in the auth policy
-    - /blogs/lower-east-side
+    - /blogs/soho
 
 # The serving configuration allows for specification of a reverse proxy domain.
 # serving:
