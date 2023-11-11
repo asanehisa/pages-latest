@@ -27,30 +27,30 @@ siteStream:
 #       - joe-custom-value
 
 # Static redirects can establish redirects from individual source paths to individual destination paths.
-# staticRedirects:
-#   - from: /redirect-to-aarons-store
-#     to: /locations/en/aarons-store
-#     status: 301
-#   # static rewrite
-#   - from: /blogs/les
-#     to: /blogs/lower-east-side
-#     status: 200
-# # Dynamic redirects can establish redirect groups based on pattern matching.
-# dynamicRedirects:
-#   - from: /articles/*
-#     to: /blogz/:splat
-#     status: 302
-#   # dynamic rewrite
-#   - from: /blogz/*
-#     to: /blogs/:splat
-#     status: 200
+staticRedirects:
+  - from: /redirect-to-aarons-store
+    to: /locations/en/aarons-store
+    status: 301
+  # static rewrite
+  - from: /blogs/les
+    to: /blogs/lower-east-side
+    status: 200
+# Dynamic redirects can establish redirect groups based on pattern matching.
+dynamicRedirects:
+  - from: /articles/*
+    to: /blogz/:splat
+    status: 302
+  # dynamic rewrite
+  - from: /blogz/*
+    to: /blogs/:splat
+    status: 200
 
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
-sitemap:
-  excludeList:
-    - /blogs/*
-  fileName: fancy-sitemap.xml
-  disableSitemapGeneration: true
+# sitemap:
+#   excludeList:
+#     - /blogs/*
+#   fileName: fancy-sitemap.xml
+#   disableSitemapGeneration: true
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
 authentication:
