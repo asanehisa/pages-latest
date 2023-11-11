@@ -56,7 +56,7 @@ sitemap:
 authentication:
   policyName: blogs-policy
   includePaths: # the paths which should be included in the auth policy
-    - /blogs/financial-district
+    - /blogs/lower-east-side
 
 # The serving configuration allows for specification of a reverse proxy domain.
 # serving:
