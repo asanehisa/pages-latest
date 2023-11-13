@@ -10,6 +10,7 @@ import {
 } from "@yext/pages";
 import "../index.css";
 import { Locations as LocationsType } from "../types/autogen";
+import { useEffect } from "react";
 
 export const config: TemplateConfig = {
   stream: {
@@ -63,11 +64,24 @@ const Locations: Template<TemplateRenderProps<LocationsType>> = ({
 }) => {
   const { name } = document;
 
+  useEffect(() => {
+    console.log("Testing priority of env vars");
+    console.log(`VAR1: ${YEXT_PUBLIC_VAR1}`);
+    console.log(`VAR2: ${YEXT_PUBLIC_VAR2}`);
+    console.log(`VAR3: ${YEXT_PUBLIC_VAR3}`);
+    console.log(`VAR4: ${YEXT_PUBLIC_VAR4}`);
+  }, []);
+
   return (
     <>
       <img src={"public/locations/assets/logo.png"} alt="Yext Logo" />
       <h1>Entity Powered Page for Location entities</h1>
       <div>Entity Name: {name}</div>
+      <h2>Testing Priority of Env Vars</h2>
+      <div>VAR1: {YEXT_PUBLIC_VAR1}</div>
+      <div>VAR2: {YEXT_PUBLIC_VAR2}</div>
+      <div>VAR3: {YEXT_PUBLIC_VAR3}</div>
+      <div>VAR4: {YEXT_PUBLIC_VAR4}</div>
     </>
   );
 };
