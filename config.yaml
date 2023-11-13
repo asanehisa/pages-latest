@@ -1,7 +1,7 @@
 buildConfiguration:
-  buildCommand: npm install && npm run build:local
-  # installDependenciesStep:
-  #   command: npm install
+  buildCommand: npm install && npm run build
+  installDependenciesStep:
+    command: npm install
   #   requiredFiles:
   #     - package.json
   #     - package-lock.json
