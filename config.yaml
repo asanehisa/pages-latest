@@ -1,5 +1,11 @@
 buildConfiguration:
-  buildCommand: npm run build
+  buildCommand: npm run build:local
+  installDependenciesStep:
+    command: npm install
+    requiredFiles:
+      - package.json
+      - package-lock.json
+      - .npmrc
 
 livePreviewConfiguration:
   serveCommand: "npm run dev -- --port 8080"
@@ -15,11 +21,11 @@ siteStream:
     locales:
       - en
 
-# responseHeaders:
-#   - pathPattern: .*
-#     headerKey: joe-custom-header
-#     headerValues:
-#       - joe-custom-value
+responseHeaders:
+  - pathPattern: .*
+    headerKey: joe-custom-header
+    headerValues:
+      - joe-custom-value
 
 # Static redirects can establish redirects from individual source paths to individual destination paths.
 staticRedirects:
