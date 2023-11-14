@@ -64,14 +64,6 @@ const Locations: Template<TemplateRenderProps<LocationsType>> = ({
 }) => {
   const { name } = document;
 
-  useEffect(() => {
-    console.log("Testing priority of env vars");
-    console.log(`VAR1: ${YEXT_PUBLIC_VAR1}`);
-    console.log(`VAR2: ${YEXT_PUBLIC_VAR2}`);
-    console.log(`VAR3: ${YEXT_PUBLIC_VAR3}`);
-    console.log(`VAR4: ${YEXT_PUBLIC_VAR4}`);
-  }, []);
-
   return (
     <>
       <img src={"public/locations/assets/logo.png"} alt="Yext Logo" />
