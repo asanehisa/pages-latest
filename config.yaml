@@ -22,7 +22,7 @@ siteStream:
       - en
 
 responseHeaders:
-  - pathPattern: /blogs/.*
+  - pathPattern: .*
     headerKey: aaron-custom-header
     headerValues:
       - aaron-custom-value
