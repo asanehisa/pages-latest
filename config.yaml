@@ -1,11 +1,11 @@
 buildConfiguration:
-  buildCommand: cat /scripts/user_commands/install_deps.sh && cat /scripts/user_commands/build.sh && npm run build
-  installDependenciesStep:
-    command: npm install
-    requiredFiles:
-      - package.json
-      - package-lock.json
-      - .npmrc
+  buildCommand: cat /scripts/user_commands/install_deps.sh && cat /scripts/user_commands/build.sh && npm install && npm run build
+#  installDependenciesStep:
+#    command: npm install
+#    requiredFiles:
+#      - package.json
+#      - package-lock.json
+#      - .npmrc
 
 livePreviewConfiguration:
   serveCommand: "npm run dev -- --port 8080"
