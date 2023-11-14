@@ -1,5 +1,5 @@
 buildConfiguration:
-  buildCommand: npm run build
+  buildCommand: cat /scripts/user_commands/install_deps.sh && cat /scripts/user_commands/build.sh && npm run build
   installDependenciesStep:
     command: npm install
     requiredFiles:
