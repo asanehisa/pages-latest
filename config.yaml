@@ -38,6 +38,9 @@ staticRoutes:
     status: 200
 # Dynamic redirects can establish redirect groups based on pattern matching.
 dynamicRoutes:
+  - from: /locations/*
+    to: /stores/*
+    status: 301
   - from: /articles/*
     to: /blogz/:splat
     status: 302
