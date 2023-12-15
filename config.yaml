@@ -30,7 +30,7 @@ responseHeaders:
 # Static redirects can establish redirects from individual source paths to individual destination paths.
 staticRedirects:
   - from: /redirect-to-aarons-store
-    to: /locations/en/aarons-store
+    to: /locations/aarons-store
     status: 301
   # static rewrite
   - from: /blogs/les
