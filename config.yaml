@@ -39,7 +39,7 @@ staticRoutes:
 # Dynamic redirects can establish redirect groups based on pattern matching.
 dynamicRoutes:
   - from: /locations/*
-    to: /stores/*
+    to: /stores/:splat
     status: 301
   - from: /articles/*
     to: /blogz/:splat
