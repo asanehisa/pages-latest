@@ -4,7 +4,9 @@ import yextSSG from "@yext/pages/vite-plugin";
 
 export default defineConfig({
   plugins: [react(), yextSSG()],
-  // build: {
-  //   assetsDir: "locations/assets"
-  // }
+  // files at /public/prefix/assets
+  publicDir: "/public",
+  build: {
+    assetsDir: "locations/assets"
+  }
 });

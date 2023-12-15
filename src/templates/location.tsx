@@ -52,7 +52,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         attributes: {
           rel: "icon",
           type: "image/x-icon",
-          href: "/yext-favicon.ico",
+          href: "/public/assets/yext-favicon.ico",
         },
       },
     ],

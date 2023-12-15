@@ -48,6 +48,14 @@ dynamicRoutes:
   - from: /blogz/*
     to: /blogs/:splat
     status: 200
+    dynamicRoutes:
+  - from: /assets/*
+    to: /locations/assets/:splat
+    status: 200
+
+# The serving configuration allows for specification of a reverse proxy domain.
+serving:
+  reverseProxyPrefix: https://strong-daffodil-0d9a4c.netlify.app/locations
 
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
 # sitemap:
@@ -62,6 +70,4 @@ authentication:
   includePaths: # the paths which should be included in the auth policy
     - /blogs/soho
 
-# The serving configuration allows for specification of a reverse proxy domain.
-# serving:
-#   reverseProxyDomain: https://strong-daffodil-0d9a4c.netlify.app/locations
+
