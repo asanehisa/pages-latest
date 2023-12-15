@@ -28,7 +28,7 @@ responseHeaders:
       - aaron-custom-value
 
 # Static redirects can establish redirects from individual source paths to individual destination paths.
-staticRedirects:
+staticRoutes:
   - from: /redirect-to-aarons-store
     to: /locations/aarons-store
     status: 301
@@ -37,7 +37,7 @@ staticRedirects:
     to: /blogs/lower-east-side
     status: 200
 # Dynamic redirects can establish redirect groups based on pattern matching.
-dynamicRedirects:
+dynamicRoutes:
   - from: /articles/*
     to: /blogz/:splat
     status: 302
