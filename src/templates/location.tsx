@@ -10,6 +10,7 @@ import {
 } from "@yext/pages";
 import "../index.css";
 import { Locations as LocationsType } from "../types/autogen";
+import { Link } from "@yext/sites-components";
 
 export const config: TemplateConfig = {
   stream: {
@@ -60,6 +61,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 
 const Locations: Template<TemplateRenderProps<LocationsType>> = ({
   document,
+  relativePrefixToRoot,
 }) => {
   const { name } = document;
 
@@ -68,6 +70,8 @@ const Locations: Template<TemplateRenderProps<LocationsType>> = ({
       <h1>Entity Powered Page for Location entities</h1>
       <div>Entity Name: {name}</div>
       <h2>Testing Priority of Env Vars</h2>
+      <h1>Relative Prefix to Root: {relativePrefixToRoot}</h1>
+      <a href={"lucs-store"}>Test Proxy</a>
     </>
   );
 };
