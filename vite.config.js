@@ -7,6 +7,7 @@ export default defineConfig({
   // files at /public/prefix/assets
   // publicDir: "/public",
   build: {
-    assetsDir: "locations/assets"
+    assetsDir: "locations/assets",
+    // assetsInclude: ['**/*.ico'] // Include all .ico files as they are
   }
 });

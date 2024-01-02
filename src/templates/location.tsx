@@ -10,7 +10,6 @@ import {
 } from "@yext/pages";
 import "../index.css";
 import { Locations as LocationsType } from "../types/autogen";
-import { useEffect } from "react";
 
 export const config: TemplateConfig = {
   stream: {
@@ -52,7 +51,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         attributes: {
           rel: "icon",
           type: "image/x-icon",
-          href: "/locations/assets/static/yext-favicon.ico",
+          href: "/locations/assets/yext-favicon.ico",
         },
       },
     ],
@@ -66,7 +65,6 @@ const Locations: Template<TemplateRenderProps<LocationsType>> = ({
 
   return (
     <>
-      <img src={"public/locations/assets/logo.png"} alt="Yext Logo" />
       <h1>Entity Powered Page for Location entities</h1>
       <div>Entity Name: {name}</div>
       <h2>Testing Priority of Env Vars</h2>
