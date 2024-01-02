@@ -38,9 +38,9 @@ staticRoutes:
     status: 200
 # Dynamic redirects can establish redirect groups based on pattern matching.
 dynamicRoutes:
-  - from: /locations/*
-    to: /stores/:splat
-    status: 301
+  # - from: /locations/*
+  #   to: /stores/:splat
+  #   status: 301
   - from: /articles/*
     to: /blogz/:splat
     status: 302
@@ -54,7 +54,7 @@ dynamicRoutes:
 
 # The serving configuration allows for specification of a reverse proxy domain.
 serving:
-  reverseProxyPrefix: https://strong-daffodil-0d9a4c.netlify.app/locations
+  reverseProxyPrefix: https://strong-daffodil-0d9a4c.netlify.app
 
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
 # sitemap:
