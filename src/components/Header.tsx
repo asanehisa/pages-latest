@@ -1,4 +1,4 @@
-import { Image, ComplexImageType, ImageType } from "@yext/sites-components";
+import { Image, ComplexImageType, ImageType } from "@yext/pages-components";
 
 export interface HeaderProps {
   logo?: ComplexImageType | ImageType;

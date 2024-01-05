@@ -1,5 +1,5 @@
 import { BlogStarter_featuredBlogs } from "../types/autogen";
-import { Image } from "@yext/sites-components";
+import { Image } from "@yext/pages-components";
 import { formatDate } from "../utils";
 
 export interface FeaturedBlogProps {

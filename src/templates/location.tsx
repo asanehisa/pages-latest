@@ -10,7 +10,7 @@ import {
 } from "@yext/pages";
 import "../index.css";
 import { Locations as LocationsType } from "../types/autogen";
-import { Link } from "@yext/sites-components";
+import { Link } from "@yext/pages-components";
 
 export const config: TemplateConfig = {
   stream: {
