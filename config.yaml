@@ -48,6 +48,7 @@ dynamicRoutes:
   - from: /blogz/*
     to: /blogs/:splat
     status: 200
+    # redirect for assets
   - from: /assets/*
     to: /locations/assets/:splat
     status: 200
