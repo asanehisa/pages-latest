@@ -29,33 +29,22 @@ responseHeaders:
 
 # Static redirects can establish redirects from individual source paths to individual destination paths.
 staticRoutes:
-  - from: /redirect-to-aarons-store
-    to: /locations/aarons-store
-    status: 301
-  # static rewrite
-  - from: /blogs/les
-    to: /blogs/lower-east-side
-    status: 200
+  # - from: /redirect-to-aarons-store
+  #   to: /locations/aarons-store
+  #   status: 301
+  # # static rewrite
+  # - from: /blogs/les
+  #   to: /blogs/lower-east-side
+  #   status: 200
 # Dynamic redirects can establish redirect groups based on pattern matching.
 dynamicRoutes:
-  # - from: /locations/*
-  #   to: /stores/:splat
-  #   status: 301
-  - from: /articles/*
-    to: /blogz/:splat
-    status: 302
-  # dynamic rewrite
-  - from: /blogz/*
-    to: /blogs/:splat
-    status: 200
-    # redirect for assets
   - from: /assets/*
-    to: /locations/assets/:splat
+    to: /blogs/assets/:splat
     status: 200
 
 # The serving configuration allows for specification of a reverse proxy domain.
 serving:
-  reverseProxyPrefix: https://strong-daffodil-0d9a4c.netlify.app
+  reverseProxyPrefix: https://strong-daffodil-0d9a4c.netlify.app/blogs
 
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
 # sitemap:

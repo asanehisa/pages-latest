@@ -1,0 +1,5 @@
+{
+  "functions/onUrlChange/urlWriteback.ts": {
+    "entrypoint": "main"
+  }
+}
