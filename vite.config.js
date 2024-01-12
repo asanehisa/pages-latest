@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react(), yextSSG()],
   // files at /public/locations/assets
   build: {
-    assetsDir: "blogs/assets",
+    // assetsDir: "blogs/assets",
   }
 });
