@@ -9,6 +9,7 @@ const main = urlWriteback({
 });
 
 function urlWriteback(config) {
+  console.log("Config", config);
   function onUrlChange(event) {
     if (!(event.entityId && event.locale && event.url)) {
       console.log("Invalid event", event);
