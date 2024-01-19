@@ -16,7 +16,7 @@ export const config: TemplateConfig = {
     $id: "locations",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
-    fields: ["id", "name", "slug", "address"],
+    fields: ["id", "name", "slug", "address", "c_alternateSlug"],
     // Defines the scope of entities that qualify for this stream.
     filter: {
       entityTypes: ["location"],
@@ -26,10 +26,11 @@ export const config: TemplateConfig = {
       locales: ["en"],
     },
   },
+  slugField: "name",
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  return document.slug ?? document.name;
+  return document.c_alternateSlug;
 };
 
 export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
