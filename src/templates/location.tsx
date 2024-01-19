@@ -26,7 +26,7 @@ export const config: TemplateConfig = {
       locales: ["en"],
     },
   },
-  slugField: "name",
+  slugField: "c_alternateSlug",
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
