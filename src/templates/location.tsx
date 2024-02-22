@@ -31,7 +31,7 @@ export const config: TemplateConfig = {
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  return document.c_alternateSlug;
+  return document.slug;
 };
 
 // export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
