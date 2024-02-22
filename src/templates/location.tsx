@@ -27,6 +27,7 @@ export const config: TemplateConfig = {
     },
   },
   slugField: "c_alternateSlug",
+  pageUrlField: "c_pagesUrl",
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {

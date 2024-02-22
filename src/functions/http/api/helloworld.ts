@@ -1,9 +1,9 @@
-import { SitesHttpRequest, SitesHttpResponse } from "@yext/pages/*";
+import { PagesHttpRequest, PagesHttpResponse } from "@yext/pages/*";
 import _ from "lodash"; // Import the lodash library
 
 export default async function helloWorld(
-  request: SitesHttpRequest
-): Promise<SitesHttpResponse> {
+  request: PagesHttpRequest
+): Promise<PagesHttpResponse> {
   const { queryParams } = request;
 
   let responseBody = "hello world";
