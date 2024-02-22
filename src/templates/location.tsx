@@ -34,9 +34,9 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return document.c_alternateSlug;
 };
 
-export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
-  return [`index-old/${document.id.toString()}`];
-};
+// export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
+//   return [`index-old/${document.id.toString()}`];
+// };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   relativePrefixToRoot,
@@ -71,7 +71,7 @@ const Locations: Template<TemplateRenderProps<LocationsType>> = ({
       <h1>Entity Powered Page for Location entities</h1>
       <div>Entity Name: {name}</div>
       <h2>Testing Priority of Env Vars</h2>
-      <h1>Relative Prefix to Root: {relativePrefixToRoot}</h1>
+      {/* <h1>Relative Prefix to Root: {relativePrefixToRoot}</h1> */}
       <a href={"lucs-store"}>Test Proxy</a>
     </>
   );

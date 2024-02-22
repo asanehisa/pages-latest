@@ -43,8 +43,8 @@ dynamicRoutes:
     status: 200
 
 # The serving configuration allows for specification of a reverse proxy domain.
-serving:
-  reverseProxyPrefix: https://strong-daffodil-0d9a4c.netlify.app/blogs
+# serving:
+#   reverseProxyPrefix: https://strong-daffodil-0d9a4c.netlify.app/blogs
 
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
 # sitemap:
