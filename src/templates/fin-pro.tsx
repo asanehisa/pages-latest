@@ -31,6 +31,14 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
     title: "Blog Home",
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
+    // other: `<!-- Google tag (gtag.js) -->
+    // <script async src="https://www.googletagmanager.com/gtag/js?id=TAG_ID"></script>
+    // <script>
+    //   window.dataLayer = window.dataLayer || [];
+    //   function gtag(){dataLayer.push(arguments);}
+    //   gtag('js', new Date());
+    //   gtag('config', 'TAG_ID');
+    // </script>`
   };
 };
 
@@ -51,6 +59,13 @@ const EntityPage: Template<TemplateRenderProps> = ({
     <>
       <h1>Entity Powered Page for Fin Pro entities</h1>
       <div>Entity Name: {name}</div>
+      <div id="reviews">
+        {" "}
+        <script
+          type="module"
+          src="http://localhost:8000/modules/reviews.umd.js"
+        ></script>
+      </div>
     </>
   );
 };
