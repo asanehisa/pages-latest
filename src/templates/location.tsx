@@ -26,7 +26,7 @@ export const config: TemplateConfig = {
       locales: ["en"],
     },
   },
-  slugField: "c_alternateSlug",
+  // slugField: "c_alternateSlug",
   // pageUrlField: "c_pagesUrl",
 };
 

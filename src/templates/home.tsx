@@ -37,7 +37,7 @@ export const config: TemplateConfig = {
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  return "index.html";
+  return document.slug;
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
@@ -62,14 +62,14 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-const Home: Template<TemplateRenderProps<HomeEntityType>> = ({ document }) => {
-  const { _site } = document;
+const Home: Template<TemplateRenderProps<HomeEntityType>> = (data) => {
+  const { document } = data;
 
   console.log(document);
 
   return (
-    <Main>
-      <Header logo={_site?.logo} />
+    <Main templateData={data}>
+      {/* <Header logo={_site?.logo} /> */}
       <main className="mx-auto max-w-5xl px-6 pb-52">
         <div className="flex flex-col gap-8 my-12">
           {document.blogStarter_coverPhoto && (
